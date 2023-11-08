@@ -1,0 +1,162 @@
+/*
+<!-- Copyright (c) 2023 Outspect. All rights reserved. -->
+<!-- This code is owned by Outspect. Unauthorized copying or reproduction is prohibited. -->
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(34, 34, 34);
+  background-image: linear-gradient(45deg, rgb(11, 0, 43), rgb(39, 0, 29), rgb(57, 0, 68), rgb(30, 0, 70));
+  transition: transform 0.2s ease;
+  animation: gradientShift 5s infinite linear;
+  background-size: 500%;
+
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #111111;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(1, 33, 75, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(47, 128, 237, 0.5);
+}
+
+.box h2 {
+  margin-bottom: 10px;
+}
+
+.dark-mode-textbox {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.dark-mode-textbox::placeholder {
+  color: #999;
+}
+
+.dark-mode-textbox:focus {
+  border-color: #007bff;
+  background-color: #111;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-image: linear-gradient(45deg, rgb(47, 128, 237), rgb(110, 9, 141), rgb(55, 0, 255), rgb(47, 128, 237));
+  background-size: 400%;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+  animation: gradientShift 5s infinite linear;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(47, 128, 237, 0.5);
+}
+
+.patch-notes {
+  background-color: #111111;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 33, 75, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Courier New", monospace;
+}
+
+.patch-notes:hover {
+  transform: scale(1.005);
+  box-shadow: 0 0 10px rgba(47, 128, 237, 0.5);
+}
+
+.patch-table {
+  margin-top: 10px;
+}
+
+.patch-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patch-table th, .patch-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #666;
+}
+
+.patch-table th {
+  font-weight: bold;
+}
+
+.green-text {
+  color: #00ff00;
+}
+
+.orange-text {
+  color: #ff9900;
+}
+
+.red-text {
+  color: #ff0000;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+}
